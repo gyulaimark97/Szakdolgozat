@@ -1,30 +1,58 @@
-\Chapter{Koncepció}
+\Chapter{Szoftvereszközök numerikus számításokhoz}
 
-\Section{A fejezet célja}
+\Section{Alapvető elvárások}
 
-Ez a fejezet még nem a saját eredményekkel foglalkozik, hanem bemutatja, mi a problémakör, milyen módszerekkel, milyeneredményeket sikerült elérni eddig másoknak.
+TODO: Röviden el kell mondani, hogy milyen elvárások vannak a szoftverekkel szemben.
+- Lehessen programokat írni benne. (Nem feltétlenül kell, hogy általános célú programozási nyelv legyen.)
+- Lehessen a kapott eredményeket grafikus formában megjeleníteni.
+- Lehessen dokumentálni az egyes részlépéseket.
+- Lehessen adatokat fájlból olvasni, fájlba írni. I/O támogatás. Formátumok (pl. CSV)
+- Számítási teljesítmény (inkább szimulációk esetén, oktatásnál annyira nem szempont).
+- Legyen elterjedt, tehát a hallgatók később ipari szinten is tudják alkalmazni az ismereteket.
+- Ne legyen túlságosan nehezen tanulható. (Például procedurális paradigmára vagy OOP elvekre épüljön.)
 
-A hivatkozások jelentős része ehhez a fejezethez szokott kötődni.
-(Egy hivatkozás például így néz ki \cite{coombs1987markup}.)
-Itt lehet bemutatni a hasonló alkalmazásokat.
+\Section{Elérhető szoftverek}
 
-\Section{Tartalom és felépítés}
+TODO: Érdemes szót ejteni arról, hogy
+- mennyire elterjedtek,
+- elsődlegesen milyen feladatra készültek,
+- hogy férhetők hozzá (fizetős, ingyenes, nyílt forráskódú),
+- milyen platformokon működnek.
 
-A fejezet tartalma témától függően változhat. Az alábbiakat attól függően különböző arányban tartalmazhatják.
-\begin{itemize}
-\item Irodalomkutatás. Amennyiben a dolgozat egy módszer kidolgozására, kifejlesztésére irányul, akkor itt lehet részletesen végignézni (módszertani vagy időrendi bontásban), hogy az eddigiekben milyen eredmények születtek a témakörben.
-\item Technológia. Mivel jellemzően kutatásról vagy szoftverfejlesztésről van szó, ezért annak a jellemző elemeit, technikai részleteit itt kell bemutatni.
-Ez tehát egy módszeres bevezetés ahhoz, hogy ha valaki nem jártas a témakörben, akkor tudja, hogy a dolgozat milyen aktuálisan elérhető eredményeket, eszközöket használt fel.
-\item Piackutatás. Bizonyos témáknál új termék vagy szolgáltatás kifejlesztése a cél.
-Ekkor érdemes annak alaposan utánanézni, hogy aktuálisan milyen eszközök érhetők el a piacon.
-Ez szoftverek esetében a hasonló alkalmazások bemutatását, táblázatos formában történő összehasonlítását jelentheti.
-Szerepelhetnek képek és észrevételek a viszonyításként bemutatott alkalmazásokhoz.
-\item Követelmény specifikáció. Külön szakaszban érdemes részletesen kitérni az elkészítendő alkalmazással kapcsolatos követelményekre.
-Ehhez tartozhatnak forgatókönyvek (\textit{scenario}-k).
-A szemléletesség kedvéért lehet hozzájuk képernyőkép vázlatokat is készíteni, vagy a használati eseteket más módon szemléltetni.
-\end{itemize}
+Ehhez a fejezet végére egy összesítő táblázat is jól jöhet. 
 
-\Section{Amit csak említés szintjén érdemes szerepeltetni}
+TODO: Mindegyiknél érdemes hangsúlyozni pro- és kontra a jellemzőket.
 
-Az olvasóról annyit feltételezhetünk, hogy programozásban valamilyen szinten járatos, és a matematikai alapfogalmakkal sem ebben a dolgozatban kell megismertetni.
-A speciális eszközök, programozási nyelvek, matematikai módszerekk és jelölések persze jó, hogy ha említésre kerülnek, de nem kell nagyon belemenni a közismertnek tekinthető dolgokba.
+TODO: Mindegyikhez érdemes hivatkozásokat is rakni.
+
+\SubSection{MATLAB}
+
+\SubSection{Python/NumPy}
+
+A Python az egyik legnépszerűbb programozási nyelv.
+TIOBE index.
+
+\SubSection{GNU R}
+
+Statisztikai területen nagyon elterjedt.
+Nyílt forráskódú.
+
+\SubSection{Maple}
+
+\SubSection{Wolfram: Mathematica, Wolfram Alpha}
+
+Nem szükséges hozzá külön telepítés.
+A levezetések és teljes ábrák fizetősek.
+
+\SubSection{Fortran}
+
+Régi, implementációs limitek (pl. sorok hossza)
+
+\Section{Python eszközkészlet}
+
+TODO: Áttekintő jelleggel írni a
+- Python-ról, nyelvről,
+- értelmezőjéről (IPython-ról külön) és
+- fejlesztőeszközökről (Spyder és Jupyter), PyCharm,
+- grafikus megjelenítéshez Matplotlib,
+- NumPy.
