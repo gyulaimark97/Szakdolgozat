@@ -1,114 +1,120 @@
-\Chapter{Telepítés}
+\Chapter{A Python környezet összeállítása}
 
-Ha szeretnénk Python-ban programozni ahoz szükségünk van egy
+Ha szeretnénk Python-ban programozni, ahhoz szükségünk van egy
 szövegszerkesztőre vagy integrált fejlesztő környezetre a Python
-értelmezőn túl. A python értelmező ingyenesen elérhető a python
-weboldaláról. A népszerűbb linux disztribúciók, mint az Ubuntu, Debian,
-Linux Mint ...stb, már magába foglalja az értelmezőt ezért telepíteni
+értelmezőn túl. A python értelmező ingyenesen elérhető a Python
+weboldaláról. A népszerűbb GNU/Linux disztribúciók (mint például a Debian, Ubuntu, Linux Mint) már beépítve tartalmazzák az értelmezőt, ezért azt telepíteni
 sem kell. A csomagok kezeléséhez szükségünk van a \texttt{pip} nevű
 csomagkezelőre is. A \texttt{pip} segítségével tudjuk telepíten
-lokálisan vagy globálisan a felhasználni kívánt csomagokat is melyek
+lokálisan vagy globálisan a felhasználni kívánt csomagokat is, melyek
 előre megírt program könyvtárak tulajdonképpen, melyeket fel
-használhatunk ahoz, hogy ne mindent nekünk kelljen implementálni. Ilyen
+használhatunk ahhoz, hogy ne mindent nekünk kelljen implementálni. Ilyen
 csomagok a Numpy, Matplotlib, Scipy, vagy a Jupyter notebook is melyeket
 használok a későbbiekben.
 
-    \subsection{Python telepítése}\label{python-telepuxedtuxe9se}
+\Section{Python telepítése}
 
-    Első lépésként le kell töltenünk a python értelmezőt a megfelelő
+    Első lépésként le kell töltenünk a Python értelmezőt a megfelelő
 operációs rendszerünkre. Windows alatt a telpítőbe konfigurálhatjuk mit
 telepítsünk, és azt is, hogy csak a saját felhasználónknak vagy pedig
 mindenkinek szeretnénk telepíteni, útóbbihoz rendszergazdai jogosultság
 szükséges.
 
-Unix-szerű rendszereken sem sokkal nehezebb a dolgunk bár operációs
+Unix-szerű rendszereken sem sokkal nehezebb a dolgunk, bár operációs
 rendszerenként és disztribúciónként eltérések mutatkoznak.
 
 A forráskódból való telepítéshez először is le kell tölteni a forrást,
-szintén a python weboldaláról, majd kicsomagolni ezek után elnavigálunk
+szintén a Python weboldaláról, majd kicsomagolni, ezek után elnavigálunk
 egy terminálban a mappába melybe kicsomagoltunk és futtatnunk kell a
-configure nevezetű bash scriptet (\textbf{./configure} paranccsal tudjuk
-megtenni). Miután végzett kiadjuk a \textbf{make} parancsot mellyel
-elkezdődik a fordítási folyamat és felépül az alkalmazás esetünkben a
-CPython értelmező. A következő lépés a \textbf{make test} mely
-ellenőrzi, hogy minden rendben ment, majd jöhet a \textbf{sudo make
-install} mellyel telepítjük az értelmezőt (make install előtt ott van a
-sudo így láthatjuk hogy ehez szükségünk lesz root jogra (superuser)).
-
-\emph{Megjegyzés:} - \emph{Itt ha a fordítás vagy a telepítés során
+configure nevezetű bash scriptet (\texttt{./configure} paranccsal tudjuk
+megtenni). Miután végzett, kiadjuk a \texttt{make} parancsot mellyel
+elkezdődik a fordítási folyamat és felépül az alkalmazás, esetünkben a
+CPython értelmező. A következő lépés a \texttt{make test} mely
+ellenőrzi, hogy minden rendben ment, majd jöhet a \texttt{sudo make
+install} mellyel telepítjük az értelmezőt (\texttt{make install} előtt ott van a
+\texttt{sudo} így láthatjuk hogy ehez szükségünk lesz root jogra (superuser)).
+(Itt ha a fordítás vagy a telepítés során
 hibába ütközünk valószínüleg hiányzik valamilyen csomag a
 számítógépünkről amit telepítenünk kell, ha ez megtörtént, újra le kell
 futattni a parancsot amiben a hibát kaptuk és folytatódhat a folyamat
-tovább.}
-
+tovább.)
+Néhány további észrevétel az értelmezővel és a verziójával kapcsolatban az alábbi pontokban olvasható.
 \begin{itemize}
 \item
-  \emph{Egyes linux disztribúciók rendelkeznek előre telepített
+  Egyes Linux disztribúciók rendelkeznek előre telepített
   értelmezővel, így felesleges telepíteni azt, ellenőrizzük le először,
-  hogy telepítve van-e. Illetve némely linux disztribúció (főleg a
-  debian alapúak mint, Debian, Ubuntu, Linux mint) különbséget tesz a
-  python2 és python3 közözótt előbbit terminálból \textbf{python} míg
-  utóbbit \textbf{python3} paranccsal érjük el és ez igaz a pip
-  csomagkezelőre is, tehát, ha python3-al dolgozunk akkor a
-  \textbf{pip3}-al tudunk hozzá csomagokat telepíteni.}
+  hogy telepítve van-e. Illetve némely Linux disztribúció (főleg a
+  Debian alapúak, mint az Ubuntu vagy a Linux mint) különbséget tesz a
+  \texttt{python2} és \texttt{python3} közözótt. Előbbit terminálból \texttt{python} míg
+  utóbbit \texttt{python3} paranccsal érjük el.
+\item Ez igaz a \texttt{pip}
+  csomagkezelőre is, tehát, ha \texttt{python3}-al dolgozunk akkor a
+  \texttt{pip3}-al tudunk hozzá csomagokat telepíteni.
+\item
+A \texttt{pip} az új Python változatokban már a Python részeként
+telepítésre kerül.
 \end{itemize}
 
-    A \texttt{pip} az új Python változatokban már a Python részeként
-telepítésre kerül.
+\SubSection{pip}
 
-    \subsection{pip}\label{pip}
-
-    A pipet egyszerűen lehet használni terminálban vagy windwos
-parancssorban begépeljük hogy pip (vagy pip3) és megadjuk a csomag nevét
-amit szeretnénk telepíteni: - \emph{pip somePackage} - \emph{python pip
--m somePackage}
-
+A \texttt{pip}-et egyszerűen lehet használni terminálban vagy ha a Windows
+parancssorban begépeljük hogy \texttt{pip} (vagy \texttt{pip3}) és megadjuk a csomag nevét
+amit szeretnénk telepíteni:
+\begin{python}
+pip somePackage
+python pip -m somePackage
+\end{python}
 Esetleg csinálhatunk olyat is, hogy összeírjuk a csomagokat egy
-szövegfájlba (soronként egy csomagot) és telepítjük a - \emph{pip -r
-csomagnevek.txt}
-
+szövegfájlba (soronként egy csomagot) és telepítjük a - 
+\begin{python}
+pip -r csomagnevek.txt
+\end{python}
 parancs segítségével.
+TODO: Hivatkozás! % pip weboldala: https://pip.pypa.io/en/stable/
 
-pip weboldala: https://pip.pypa.io/en/stable/
-
-    \subsection{Anaconda}\label{anaconda}
+\SubSection{Anaconda}
 
     A telepítés egy egyszerűsített változata, ha telepítjük az Anaconda
 környezetet. Az Anaconda egy tudományos, gépi tanulásos platform,
-melyben összegyűjtöttek több, mint 7500 python és R csomagot, melyeket
-egyszerűen grafikus kezelő felület mellett telepíthetünk,ezen kívül
+melyben összegyűjtöttek több, mint 7500 Python és R csomagot, melyeket
+egyszerűen, grafikus kezelő felület mellett telepíthetünk, ezen kívül
 biztosít még IDE-ket (Spyder, Visual Studio Code) illetve a Jupyter
-notebookot melyben ez a dolgozat is írodott. Az Anaconda telepítése
-egyszerű. Felmegyünk a weboldalára, letöltjük és telepítjük Windows
-alatt mind a 32 és 64 bites verzió támogatott míg Mac OS alatt
-választhatunk grafikus vagy parancssoros telepítő között, Linux alatt
-pedig támogatott az IBM Power 8 és 9 architektúrája is, az x86-64
+notebookot, melyben a dolgozathoz készített példák is íródtak. Az Anaconda telepítése
+egyszerű. Felmegyünk a weboldalára, letöltjük és telepítjük.
+Windows
+alatt mind a 32, mind pedig a 64 bites verzió támogatott míg Mac OS alatt
+választhatunk grafikus vagy parancssoros telepítő között.
+Linux alatt támogatott az IBM Power 8 és 9 architektúrája is, az x86-64
 mellett.
 
-    \subsection{Jupyter munkafüzet}\label{jupyter-munkafuxfczet}
+\SubSection{Jupyter munkafüzet}
 
-    A Jupyter notebookról még csak említés szintjén volt szó, most nézzünk
+A Jupyter notebookról még csak említés szintjén volt szó az eddigiekben. Most nézzünk
 bele kicsit mélyebben mi is ez. A Jupyter notebook tulajdonképpen egy
 nyílt forráskódú web alkalmazás mely lehetőséget nyújt arra, hogy olyan
 interaktív dokumentumokat készítsünk és osszunk meg, melyek egyszerre
 tartalmaznak futtatható kódokat és magyarázó szöveget, vizualizációkat.
 A legelterjedtebben Python nyelvvel használják de támogat több, mint 40
 programozási nyelvet köztük a C++, R, Ruby, julia és Calysto scheme
-programozási nyelveket és a notebook ideális adat vizualizációra,
+programozási nyelveket.
+A notebook ideális adat vizualizációra,
 numerikus számításokhoz, gépi tanuláshoz és statisztikai modellekhez.
 
-Maga a munkafüzet egy json szintaktikáju .ipynb kiterjesztésű fájl mely
-úgynevezett cellákból áll. A celláknak vannak típusai: -
-\textbf{markdown:} a markdown cellákban lehet a szöveget írni különböző
+Maga a munkafüzet egy JSON szintaktikájú \texttt{.ipynb} kiterjesztésű fájl, mely
+úgynevezett cellákból áll. A celláknak az alábbi típusai vannak.
+\begin{itemize}
+\item \texttt{markdown}: a markdown cellákban lehet a szöveget írni különböző
 formázási lehetőségekkel. A markdown cellák támogatják a HTML elemeket
-és a Latex matetmatikai módját, illetve más leíró nylevekből is vett át
-egy két dolgot. - \textbf{code:} a code cellákban helyezhetjük el a
-kódunkat melyet le szeretnénk futtatni - \textbf{heading:}
-tulajdonképpen egy markdown cella csak rak a jupíter egy \#-ot az
-elejére ami a legnagyobb headinget jelöli - \textbf{raw:} egy cella mely
-nem kerül formázásra
-
+és a \LaTeX\ matematikai módját, illetve más leíró nyelvekből is vett át
+elemeket.
+\item \texttt{code}: ezekben a cellákban helyezhetjük el a
+kódunkat, melyet le szeretnénk futtatni.
+\item \texttt{heading}:
+Tulajdonképpen egy MarkDown cella, csak rak a Jupyter egy \#-ot az
+elejére, ami a legnagyobb headinget jelöli.
+\item \texttt{raw}: egy cella mely
+nem kerül formázásra.
+\end{itemize}
 A munkafüzet az IPython shellt használja, amely lehetővé teszi nekünk
-ezt és az interaktív widget-ek használatát is a munkafüzetben, melynek a
+ezt, és az interaktív widget-ek használatát is a munkafüzetben, melynek a
 segítségével így akár a kódunk paramétereit is megváltoztathatjuk.
-

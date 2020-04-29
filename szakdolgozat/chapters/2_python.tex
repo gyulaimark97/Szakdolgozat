@@ -1,34 +1,18 @@
 \Chapter{Python}
 
-\section{Bevezető}\label{bevezetux151}
+\Section{A Python programozási nyelv}
 
-    Ebben a rövid fejezetben szeretném a kedves Olvasónak reprezentálni
-miről is szól a szakdolgozat, mi a témája, mit használtam fel benne,
-mire is van szükség ha ki szeretné próbálni a benne található kódokat.
-Vágjunk is bele! Először is a téma: a szakdolgozat témája a tanult
-numerikus számítási ejárások Python környezetben való bemutatása. Ilyen
-numerikus problémák például a mátrix transzponálás mátrix felbontások
-(LU, Cholesky), lineáris egyenetrendszerek megoldása, interpolációk
-felírása, vagy a numerikus deriválás és integrálás. A numerikus
-eljárások mindig az egzakt megoldáshoz közelítő értéket fognak megadni.
-Ilyen problémákra már sokféle szoftvert fejlesztettek ki. Például a
-Matlab, de akár az R környezetet is használhatjuk ilyen célokra. De
-akkor miért Python? - teheti fel a kérdést a kedves Olvasó. A válaszom
-pedig az, hogy a dolgozatomban azt fogom bemutatni, hogy, mint sokminden
-máshoz ehhez is tökéletesen megfelel és könnyen használható ez a nyelv.
-A következő szakaszban magáról a Python nyelvről fogok írni általánosan,
-majd áttekintem a dolgozat fő részeit.
-
-    \subsubsection{Mi is az a Python?}\label{mi-is-az-a-python}
-
-    A Python egy nagyon magas szintű, platform független, általános
-programozási nyelv szóval itt nem a kígyófélék egy családjára vagy Monty
+A Python egy nagyon magas szintű, platform független, általános célú
+programozási nyelv, szóval itt nem a kígyófélék egy családjára vagy Monty
 Pythonra (bár a nevét a a Monty Python csapatról kapta) kell gondolni.
 Egy könnyen elsajátítható programozási nyelv mely jelen pillanatban a 3
-legnépszerűbb között van a világon (2020 Február). A nyelv interpretált
+legnépszerűbb között van a világon (2020 Február).
+TODO: Hivatkozás!
+
+A nyelv interpretált
 és támogatja a objektum orientált, a funkcionális, az imperatív és a
 procedurális programozási paradigmákat, valamint a dinamikus típusokat
-és dinamikus memóriakezelést (használ \emph{garbage collector}t). A
+és dinamikus memóriakezelést, szemétgyűjtő algoritmust (használ \emph{garbage collector}t). A
 nyelvet Guido van Rossum holland programozó kezdte el fejleszteni
 1989-ben, majd nyilvánosságra hozta 1991-ben. Ez volt a 0.9-es
 verziószámú. 1994-ben megjelent az 1.0-ás majd 2000-ben a 2.0-ás verzió
@@ -38,11 +22,10 @@ utolsó támogatott verzióinak (2.7.x) a támogatása is megszűnt 2020
 januárban. A nyelvet napjainkban már a PSF (\emph{Python Software
 Foundation}) fejleszti és kezeli.
 
-    \subsubsection{Felhasználása különböző
-területeken}\label{felhasznuxe1luxe1sa-kuxfcluxf6nbuxf6zux151-teruxfcleteken}
+\Section{Felhasználása különböző
+területeken}
 
-    A Python nyelvet sok területen felhasználják, többek között
-
+A Python nyelvet sok területen felhasználják, többek között
 \begin{itemize}
 \item
   Webfejlesztésben,
@@ -57,60 +40,52 @@ területeken}\label{felhasznuxe1luxe1sa-kuxfcluxf6nbuxf6zux151-teruxfcleteken}
 \item
   Üzleti szoftverek fejlesztésében.
 \end{itemize}
-
 Látható tehát hogy tényleg sok helyen jól használható ez a nyelv.
 
-    \subsubsection{Mi szükséges a
-hozzá?}\label{mi-szuxfcksuxe9ges-a-hozzuxe1}
+\Section{Hardveres és szoftveres követelmények}
 
-    Tulajdonképpen csak egy számítógép, a Python interpreter és egy
+Tulajdonképpen csak egy számítógép, a Python interpreter és egy
 támogatott operációs rendszer, amit nem lesz nehéz találni hiszen a
 nyelv minden ma használt és elterjedt operációs rendszert támogat. Az
 interpreter pedig letölthető a python weboldaláról (www.python.org),
 illetve egyes operációs rendszerekben alapértelmezés szerint telepítve
 van (különböző linux disztribúciók).
 
-    \subsubsection{Milyen problémákkal fog foglalkozni a
-dolgozat?}\label{milyen-probluxe9muxe1kkal-fog-foglalkozni-a-dolgozat}
+\Section{A dolgozatban vizsgált problémák}
 
-    Ahogy már fent említettem, a dolgozat Python-ban fogja bemutatni a
+Ahogy már fent említettem, a dolgozat Python-ban fogja bemutatni a
 tanult numerikus problémákat és módszereket, melyekkel egy közelítő
 megoldást adhatunk egy-egy problémára. Ilyen prolémák:
-
 \begin{itemize}
 \item
-  Hibaszámítás: Abszulút és relatív hiba
+  Hibaszámítás: Abszulút és relatív hiba,
 \item
-  Vektor és mátrix műveletek
+  Vektor és mátrix műveletek,
 \item
-  Lineáris egyenletrendszerek megoldása
+  Lineáris egyenletrendszerek megoldása,
 \item
-  Interpolációk
+  Interpolációk,
 \item
-  Numerikus deriválás
+  Numerikus deriválás,
 \item
-  Numerikus Integrálás
+  Numerikus Integrálás,
 \item
-  Sajátérték és sajátvektor
+  Sajátérték és sajátvektor.
 \end{itemize}
-
 Ezeken belül is az ilyen módszerekkel fogok dolgozni, mint például:
-
 \begin{itemize}
 \item
-  Gauss módszer
+  Gauss módszer,
 \item
-  Gauss-Jordan módszer
+  Gauss-Jordan módszer,
 \item
-  Legkisebb négyzetek módszere
+  Legkisebb négyzetek módszere,
 \item
-  Lagrange interpolációk
+  Lagrange interpolációk,
 \item
-  Spline interpolációk
+  Spline interpolációk,
 \item
-  Téglalap módszer
+  Téglalap módszer,
 \item
-  Trapéz módszer
+  Trapéz módszer.
 \end{itemize}
-
-
