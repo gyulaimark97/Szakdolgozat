@@ -30,8 +30,8 @@ hogy itt matematikai problémák megoldására tudjunk programokat írni,
 ezért nem feltétlenül kell általános nyelvnek lennie. Erre jó példa a
 \textbf{Matlab}, amit mátrix műveletekhez optimalizáltak vagy az
 \textbf{R}, ami egy statisztikai programcsomag. Ellenpélda a
-\textbf{Python}, mely egy általános célú nyelv de a \texttt{NumPy} és
-\texttt{SciPy} csomag segítségével használhatunk numerikus problémák
+\textbf{Python}, mely egy általános célú nyelv de a \texttt{NumPy} \cite{numpy} és
+\texttt{SciPy} \cite{scipy} csomag segítségével használhatunk numerikus problémák
 megoldására.
 
 A programozhatóság mellett fontos még a programozási nyelv milyensége.
@@ -96,8 +96,7 @@ A következő pontokban áttekintem, hogy melyek az elterjedtebb, matematikai sz
 \SubSection{Fortran}
 
 A Fortran egy általános célú programozási nyelv melyet az IBM
-fejlesztett ki még az 1950-es években.
-TODO: Hivatkozás! % Weboldal: https://gcc.gnu.org/fortran/, https://wg5-fortran.org/
+fejlesztett ki még az 1950-es években \cite{fortran}.
 Napjainkban is használatos és még
 napjainkban is fejlesztik. Aránylag nehezen tanulható nyelv ami több
 programozási paradigmát is támogat köztük az objektum orientáltságot,
@@ -113,7 +112,6 @@ az elválasztó jelet kiteni az adatok közé).
 \caption{Fortran forráskód részlet}
 \label{fig:fortran}
 \end{figure}
-TODO: Megjelölni a kép forrását!
 
 \Aref{fig:fortran}. ábrán egy Fortran forráskód részletet láthatunk. A kód a kötelező jellegű formázás miatt ugyan jól strukturált, viszont az alacsony szintű műveletek (mint például a \texttt{GO TO}) nehezítik a program működésének megértését.
 
@@ -122,8 +120,7 @@ TODO: Megjelölni a kép forrását!
 A \textbf{Maple} a Maplesoft által fejlesztett matematikai
 szoftvercsomag, mely kombinál egy hatékony matematikai motort, mely a
 számításokat végzi és egy könnyen használható felhasználói felületet,
-ezáltal a használata egyszerű és gyors is tud lenni. 
-TODO: Hivatkozás! % Weboldala: https://www.maplesoft.com/
+ezáltal a használata egyszerű és gyors is tud lenni \cite{maple}.
 A felhasználói
 felület mellett parancssoros módban is képes működni, a saját nyelvét
 használva. Scripteket is írhatunk melyet később megtudunk hívni.
@@ -138,7 +135,7 @@ használva. Scripteket is írhatunk melyet később megtudunk hívni.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{img/Maple_screenshots.jpg}
-\caption{Maple képernyőképek}
+\caption[Maple]{Maple képernyőképek\footnotemark}
 \label{fig:maple-screenshots}
 \end{figure}
 
@@ -157,13 +154,14 @@ Matlab verziókkal is, ezzel könnyítve a munkát. Képes az ismertebb
 adattárolásra használt fájlokba menteni és betölteni is, mint CSV, XLS.
 Elérhető Microsoft Windowsra, Linuxra és Apple MacOS-re.
 
+\footnotetext{forrás: \url{https://en.wikipedia.org/wiki/Maple_(software)}}
+
 \SubSection{MATLAB}
 
 A \textbf{Matlab} a MathWorks programcsomagja és programozási nyelve is
 egyben, egy nagyon elterjedt nyelv a világon és számos helyen használják
 különböző célokra mint: numerikus számítások, robotika, adat elemzés,
-gépi tanulás, jel feldolgozás, kockázat elemzés, és irányító rendszerek.
-TODO: Hivatkozás! % MathWorks weboldala: https://www.mathworks.com/
+gépi tanulás, jel feldolgozás, kockázat elemzés, és irányító rendszerek \cite{matlab}.
 
 \begin{figure}[h!]
 \centering
@@ -175,7 +173,7 @@ TODO: Hivatkozás! % MathWorks weboldala: https://www.mathworks.com/
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{img/matlab_screenshots.png}
-\caption{Képernyőképek a MATLAB grafikus felületéről}
+\caption[Matlab]{Képernyőkép a MATLAB grafikus felületéről\footnotemark}
 \label{fig:matlab-screenshots}
 \end{figure}
 
@@ -192,19 +190,22 @@ szoftver meg kell vásárolni, de van lehetőségünk ingyenesen kipróbálni
 illetve van kedvezmény diákok számára. A Matlab is képes importálni és
 exportálni az adatokat a leginkább használt fájltípusokból.
 
+% https://blogs.mathworks.com/community/2009/06/29/what-does-your-matlab-desktop-look-like-again
+
+\footnotetext{forrás: \url{https://blogs.mathworks.com/community/2009/06/29}}
+
 \SubSection{Python, NumPy és Matplotlib}
 
 Ahogy a bevezető részben már említettem, a Python egy nagyon magas
 szintű, platform független, általános programozási nyelv ami a világon
-jelen pillanatban a 3. legnépszerűbb
-(https://www.tiobe.com/tiobe-index/) ebből adódóan nagyon elterjedt.
-TODO: Hivatkozás! % Weboldala: https://www.python.org/
+jelen pillanatban a 3. legnépszerűbb \cite{tiobe}
+ebből adódóan nagyon elterjedt.
 (A programozási nyelv logója \aref{fig:python-logo}. ábrán látható.)
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{img/python-logo.png}
-\caption{A Python programozási nyelv logója}
+\caption{A Python programozási nyelv logója \cite{python}}
 \label{fig:python-logo}
 \end{figure}
 
@@ -229,7 +230,7 @@ területen alkalmazzák.
 Mivel ez egy nyelv, nem pedig programcsomag így
 szükségünk lesz valamilyen fejlesztő eszközre és egy interpreterre (vagy
 compiler-re) a használatához.
-Fejlesztőeszközök közül a PyCharm (\ref{fig:pycharm}. ábra) és a Jupyter (\ref{fig:jupyter}. ábra) az elterjedtebb eszközök.
+Fejlesztőeszközök közül a PyCharm \cite{pycharm} (\ref{fig:pycharm}. ábra) és a Jupyter \cite{jupyter} (\ref{fig:jupyter}. ábra) az elterjedtebb eszközök.
 
 A \texttt{NumPy}, \texttt{SymPy},
 \texttt{SciPy} és \texttt{Matplotlib} csomagokat használva tökéletes
@@ -247,24 +248,19 @@ műveleteknek, ezenfelül tartalmaz még olyan kifinomult metódusokat
 melyeket felhasználhatunk programunk megírása során, előre definiált
 konstansokat, hasznos a lineáris algebrában és a Fourier
 transzformációknál, illetve véletlenszám generálással kapcsolatos
-függvények is elérhetők benne. Ezen felül található még két olyan eszköz
+függvények is elérhetők benne \cite{numpy}. Ezen felül található még két olyan eszköz
 melynek a segítségével \textbf{C/C++} vagy \textbf{Fortran} kódot tudunk
 integrálni a saját \textbf{Python} kódunkba.
 
-TODO: Hivatkozás! % Weboldala: https://numpy.org/
-
 A \texttt{Matplotlib} csomag segítségével tudjuk vizualizálni az
-általunk használt adatokat vagy általunk kiszámított adatokat. 2D-s
+általunk használt adatokat vagy általunk kiszámított adatokat \cite{matplotlib}. 2D-s
 grafikonokat és ábrákat készíthetünk a segítségével. Az ábrákat tudjuk
 menteni is külön fájlba, a Cairo segítségével akár vektorgrafikusan is.
-
-TODO: Hivatkozás! Weboldala: https://matplotlib.org/
 
 \SubSection{GNU R}
 
 A \textbf{GNU R} egy ingyenes szoftvercsomag, melyet elsődlegesen a
-statisztikai számítások során alkalmaznak.
-TODO: Hivatkozás! % Weboldala: https://www.r-project.org/
+statisztikai számítások során alkalmaznak \cite{gnur}.
 Az \textbf{R} nem csak egy
 programcsomag hanem egy programozási nyelv is egyben.
 
@@ -306,7 +302,6 @@ A Wolfram Alpha nem is igazán egy szoftvercsomag inkább egy probléma
 megoldó szoftver, melyet a Wolfram fejleszt és mely ötvözi a természetes
 nyelv feldolgozást, az adatbányászatot és a dinamikus programozást,
 ezáltal talál a megadott problémára megoldást.
-TODO: Hivatkozás! % Weboldala: https://www.wolframalpha.com/
 (\Aref{fig:wolfram-alpha}. ábrán láthatjuk, hogy hogy néz ki a szoftver használatát biztosító weboldal.)
 
 Az Alpha mögött óriási
@@ -319,8 +314,8 @@ részéért viszont szintén fizetni kell.
 
 A Matematica szintén a Wolfram által fejlesztett matematikai
 programcsomag, a Matlab-hoz illetve a Maple-höz hasonlóan rengeteg
-területet lefed.
-TODO: Hivatkozás! % Weboldala: https://www.wolfram.com/mathematica/
+területet lefed
+\cite{wolfram}.
 A Wolfram nevezetű szimbólikus programozási nyelvet
 használja, mely az eddigiektől nagyon eltérő. A programcsomag szintén
 nem ingyenes. Elérhető Microsoft Windowsra, Linuxra és Apple MacOS-re,
@@ -344,7 +339,7 @@ mely a Python kódot lefordítja C vagy C++ nyelvű kóddá, vagy éppen olyan
 is ami JavaScript-et vagy Java kódot varázsol a mi kis Python kódunkból.
 
 Mivel Jupyter munkafüzetet használok, így használom az IPython nevezetű
-shellt is.
+shellt is \cite{ipython}.
 Az IPhyton tartalmazza a Jupyter kernelét és támogatja különböző
 interpreterek használatát. Itt most a referencia CPython interpretert
 használom majd. Ezen felül támogatja az IPhyton az interaktív adat
